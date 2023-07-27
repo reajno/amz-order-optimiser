@@ -1,0 +1,167 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid__input {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "box-title box-title box-cor"
+    "box-input box-input box-input";
+}
+
+.box-title {
+  grid-area: box-title;
+}
+.box-cor {
+  grid-area: box-cor;
+  justify-self: end;
+}
+.box-input {
+  grid-area: box-input;
+}
+
+.gap {
+  gap: 0.5rem;
+}
+
+.box-type {
+  padding: 2rem;
+  border: 2px solid #000;
+  border-radius: 10px;
+  width: 210px;
+}
+
+.box-number {
+  font-size: 2.5rem;
+  border: 2px solid orange;
+  border-radius: 50px;
+  background-color: white;
+  padding: 0 1rem;
+}
+
+.bg-red {
+  background-color: rgb(255, 47, 0);
+}
+.bg-green {
+  background-color: rgb(47, 255, 116);
+}
+
+.app-container {
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 4rem;
+}
+
+.app-container.gap {
+  gap: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  .app-container {
+    flex-direction: column;
+    padding: 4rem;
+  }
+
+  .app-container.gap {
+    gap: 2rem;
+  }
+}
+
+
+.metrics-container {
+  margin: 4rem;
+  flex-wrap: wrap;
+}
+
+.metrics-container.gap {
+  gap: 2rem;
+}
+
+.metrics-card {
+  padding: 2rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: rgb(38, 38, 38);
+  width: 30rem;
+}
+
+.metrics-card.gap {
+  gap: 2rem;
+}
+
+.metrics-card__header{
+  justify-content: space-between;
+  font-size: 1.5rem;
+  border: 2px solid black;
+  border-radius: 50px;
+  background-color: rgb(47, 255, 116);
+  padding: 0.5rem 1.5rem;
+}
+
+.metrics-card__header.gap {
+  gap: 4rem;
+}
+
+.metrics-data__container{
+  justify-content: space-between;
+  align-items: end;
+  width: 245px;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.metrics-data {
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.metrics-alert{
+  margin-top: 2rem;
+  font-size: 2rem;
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+}
+
+.warning{
+  border: 5px solid red;
+  color: red
+}
+
+.success{
+  border: 5px solid rgb(47, 255, 116);
+  color: rgb(47, 255, 116)
+}
